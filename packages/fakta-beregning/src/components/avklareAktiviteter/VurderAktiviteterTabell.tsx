@@ -106,7 +106,8 @@ const lagVisningsnavn = (aktivitet: BeregningAktivitet,
   alleKodeverk: AlleKodeverk): string => {
   const agOpplysning = arbeidsgiverOpplysningerPerId[aktivitet.arbeidsgiverIdent];
   if (!agOpplysning) {
-    return aktivitet.arbeidsforholdType ? getKodeverknavnFn(alleKodeverk, kodeverkTyper)(aktivitet.arbeidsforholdType) : '';
+    // return aktivitet.arbeidsforholdType ? getKodeverknavnFn(alleKodeverk, kodeverkTyper)(aktivitet.arbeidsforholdType) : '';
+    return 'Dette er et veldig langt navn på en aktivitet';
   }
   return createVisningsnavnFakta(agOpplysning, aktivitet.eksternArbeidsforholdId);
 };
@@ -128,7 +129,7 @@ const lagTableRow = (
   const erValgtSkjæringstidspunktLikEllerFørTomDato = isSameOrBefore(valgtSkjæringstidspunkt, tomDatoForAktivitetGruppe);
   return (
     <TableRow key={lagAktivitetFieldId(aktivitet)}>
-      <TableColumn>
+      <TableColumn className={styles.nameCol}>
         <Normaltekst>
           {lagVisningsnavn(aktivitet, arbeidsgiverOpplysningerPerId, alleKodeverk)}
         </Normaltekst>
@@ -378,7 +379,7 @@ export class VurderAktiviteterTabell extends Component<OwnProps & MappedOwnProps
         <Element>
           {finnHeading(aktiviteter, erOverstyrt, tomDatoForAktivitetGruppe)}
         </Element>
-        <Table headerTextCodes={getHeaderTextCodes()} noHover>
+        <Table headerTextCodes={getHeaderTextCodes()} noHover classNameTable={styles.aktivitetTable}>
           {aktiviteter.map((aktivitet) => (
             lagTableRow(readOnly, isAksjonspunktClosed, aktivitet, alleKodeverk, erOverstyrt,
               harAksjonspunkt, tomDatoForAktivitetGruppe, valgtSkjæringstidspunkt, ingenAktiviterErBrukt, arbeidsgiverOpplysningerPerId)
