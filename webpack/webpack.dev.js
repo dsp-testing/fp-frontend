@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const { merge } = require('webpack-merge');
 const commonDevAndProd = require('./webpack.common');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 const ROOT_DIR = path.resolve(__dirname, '../public/client');
 const PACKAGES_DIR = path.join(__dirname, '../packages');
@@ -13,7 +14,7 @@ const config = {
   entry: [
     'webpack-dev-server/client?http://localhost:9000',
     'webpack/hot/only-dev-server',
-    APP_DIR + '/index.tsx',
+    APP_DIR + '/index.ts',
   ],
   output: {
     path: ROOT_DIR,
@@ -22,6 +23,13 @@ const config = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new ModuleFederationPlugin({
+      name: "fp-frontend",
+      remotes: {
+        fp_tilbake_frontend: `fp_tilbake_frontend@//localhost:9005/remoteEntry.js`,
+      },
+      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+    }),
   ],
   optimization: {
     moduleIds: 'named',
