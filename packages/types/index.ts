@@ -107,6 +107,7 @@ export type { default as DetaljerteFeilutbetalingsperioder, DetaljertFeilutbetal
 export type { default as VilkarsVurdertePerioderWrapper, VilkarsVurdertPeriode, AktsomhetInfo } from './src/vilkarsVurdertePerioderTsType';
 export type { default as Vedtaksbrev } from './src/vedtaksbrevTsType';
 export type { default as VedtaksbrevAvsnitt } from './src/vedtaksbrevAvsnittTsType';
+export type { default as ArbeidOgInntektsmelding } from './src/arbeidOgInntektsmeldingTsType';
 export type {
   default as FodselOgTilrettelegging, ArbeidsforholdFodselOgTilrettelegging, ArbeidsforholdTilretteleggingDato, Permisjon,
 } from './src/fodselOgTilretteleggingTsType';
