@@ -1263,6 +1263,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@emotion/use-insertion-effect-with-fallbacks@^1.0.0":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@emotion/use-insertion-effect-with-fallbacks/-/use-insertion-effect-with-fallbacks-1.0.1.tgz#08de79f54eb3406f9daaf77c76e35313da963963"
+  integrity sha512-jT/qyKZ9rzLErtrjGgdkMBn2OP8wl0G3sQlBb3YPryvKHsjvINUhVaPFfP+fpBcOkmrVOVEEHQFJ7nbj2TH2gw==
+
 "@emotion/utils@0.11.3":
   version "0.11.3"
   resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.11.3.tgz#a759863867befa7e583400d322652a3f44820924"
@@ -3040,6 +3045,13 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
+"@storybook/client-logger@7.0.21":
+  version "7.0.21"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-7.0.21.tgz#7bce1acb100d8ea8b8fe02f3f89d8f34d108ee53"
+  integrity sha512-ENoBDuVr3RPepm6cBp61GGtGGUuogBzqMUaN4Rti+wYx9sKJlmDA8SR/fMk+GxeiJ5NOnYoa1Q1kCaF8/VFD9A==
+  dependencies:
+    "@storybook/global" "^5.0.0"
+
 "@storybook/codemod@6.4.9":
   version "6.4.9"
   resolved "https://registry.yarnpkg.com/@storybook/codemod/-/codemod-6.4.9.tgz#1d5977dc80a8dcef28411d2772757edb715e7789"
@@ -3262,6 +3274,11 @@
   integrity sha512-ajk1Uxa+rBpFQHKrCcTmJyQBXZ5slfwHVEaKlkuFaW77it8RgbPJp/ccna3sgoi8oZ7FkkOyvv1Ve4SmwFqRqw==
   dependencies:
     lodash "^4.17.15"
+
+"@storybook/global@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@storybook/global/-/global-5.0.0.tgz#b793d34b94f572c1d7d9e0f44fac4e0dbc9572ed"
+  integrity sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==
 
 "@storybook/manager-webpack4@6.4.9":
   version "6.4.9"
@@ -3507,7 +3524,7 @@
   dependencies:
     "@storybook/csf" "0.0.2--canary.87bc651.0"
 
-"@storybook/theming@6.4.9", "@storybook/theming@^6.4.9":
+"@storybook/theming@6.4.9":
   version "6.4.9"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.4.9.tgz#8ece44007500b9a592e71eca693fbeac90803b0d"
   integrity sha512-Do6GH6nKjxfnBg6djcIYAjss5FW9SRKASKxLYxX2RyWJBpz0m/8GfcGcRyORy0yFTk6jByA3Hs+WFH3GnEbWkw==
@@ -3524,6 +3541,16 @@
     polished "^4.0.5"
     resolve-from "^5.0.0"
     ts-dedent "^2.0.0"
+
+"@storybook/theming@^7.0.21":
+  version "7.0.21"
+  resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-7.0.21.tgz#81c5cfd32e1cf2be5894eed87dbf434afc55de96"
+  integrity sha512-tgWoT0IdyPQIg+s/JMnP+MGTsAvNm6FJuiuKPebngids6rdYQ3EA5uQjBVV7De650JLhBFTFocS2Puj4Lti2bw==
+  dependencies:
+    "@emotion/use-insertion-effect-with-fallbacks" "^1.0.0"
+    "@storybook/client-logger" "7.0.21"
+    "@storybook/global" "^5.0.0"
+    memoizerific "^1.11.3"
 
 "@storybook/ui@6.4.9":
   version "6.4.9"
