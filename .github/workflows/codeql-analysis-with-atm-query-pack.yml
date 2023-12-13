@@ -37,7 +37,7 @@ jobs:
         # use ATM
         # uses: github/codeql-action/init@9703f2e3b044dca7fd7ac286980013077dbd0c06
         # don't use ATM
-        uses: github/codeql-action/init@v1
+        uses: github/codeql-action/init@v3
         with:
           languages: javascript
           queries: security-extended
@@ -47,5 +47,5 @@ jobs:
         # use ATM
         # uses: github/codeql-action/analyze@9703f2e3b044dca7fd7ac286980013077dbd0c06
         # don't use ATM
-        uses: github/codeql-action/analyze@v1
+        uses: github/codeql-action/analyze@v3
 
