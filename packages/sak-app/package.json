@@ -5,7 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@formatjs/intl-datetimeformat": "^4.2.6",
+    "@formatjs/intl-datetimeformat": "^6.16.3",
     "@formatjs/intl-numberformat": "^7.2.6",
     "@fpsak-frontend/assets": "1.0.0",
     "@fpsak-frontend/behandling-anke": "1.0.0",
